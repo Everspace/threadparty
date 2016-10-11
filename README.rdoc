@@ -1,6 +1,36 @@
 = threadparty
 
-Description goes here.
+Less obnoxious boilerplate when you just want to do lots of things all at once.
+
+== Usage
+
+If you want to party lots, just `require 'threadparty`
+
+    require 'threadparty'
+    
+    ThreadParty.new {
+      ProcessQueue do 
+        queue 0..5
+        perform {|i| sleep((i % 4) * 0.01); i * 2}
+      end
+    }.sequentially #or conga if you prefer
+    # => [0, 8, 2, 10, 4, 6]
+    
+Want to set up a party, but can't get to it right away? `Add` fun now, and party later.
+    
+    party = ThreadParty.new
+    party.add do
+      ProcessQueue do
+        queue 0..100
+        perform do |number|
+          number * 2
+        end
+      end
+    end
+    
+    #workweek()...
+    
+    party.sequentially
 
 == Contributing to threadparty
  
