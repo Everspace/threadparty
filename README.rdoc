@@ -4,7 +4,7 @@ Less obnoxious boilerplate when you just want to do lots of things all at once.
 
 == Usage
 
-If you want to party lots, just `require 'threadparty`
+If you want to party lots, just <tt>require 'threadparty'</tt>
 
     require 'threadparty'
     
@@ -16,7 +16,7 @@ If you want to party lots, just `require 'threadparty`
     }.sequentially #or conga if you prefer
     # => [0, 8, 2, 10, 4, 6]
     
-Want to set up a party, but can't get to it right away? `Add` fun now, and party later.
+Want to set up a party, but can't get to it right away? <tt>add</tt> fun now, and party later.
     
     party = ThreadParty.new
     party.add do
