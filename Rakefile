@@ -28,17 +28,17 @@ Juwelier::RubygemsDotOrgTasks.new
 
 require 'rspec/core'
 require 'rspec/core/rake_task'
-RSpec::Core::RakeTask.new(:spec) do |spec|
-  spec.pattern = FileList['spec/**/*_spec.rb']
+RSpec::Core::RakeTask.new(:test) do |test|
+  test.pattern = FileList['test/**/test_*.rb']
 end
 
 desc "Code coverage detail"
 task :simplecov do
   ENV['COVERAGE'] = "true"
-  Rake::Task['spec'].execute
+  Rake::Task['test'].execute
 end
 
-task :default => :spec
+task :default => :test
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
