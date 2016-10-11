@@ -18,7 +18,7 @@ Juwelier::Tasks.new do |gem|
   gem.homepage = "http://github.com/Everspace/threadparty"
   gem.license = "MIT"
   gem.summary = %Q{A ruby DSL to make multithreading just happen.}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.description = %Q{it does the dsl and things for Thread}
   gem.email = "aabonh@gmail.com"
   gem.authors = ["Aaron Haaf"]
 
